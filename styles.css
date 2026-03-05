@@ -151,7 +151,7 @@ ul {
 .panel__img--inline-small {
   width: auto;
   max-width: 100%;
-  height: 160px;
+  height: 208px;
   object-fit: contain;
   object-position: center;
   border-radius: 10px;
@@ -181,7 +181,7 @@ footer {
   .panel__img,
   .panel__img--inline,
   .panel__img--inline-small {
-    height: 140px;
+    height: 182px;
   }
 
   .hero__photo {
@@ -250,3 +250,23 @@ footer {
     flex-direction: column;
   }
 }
+
+
+
+.panel__img--keyaki {
+  height: 312px;
+}
+
+@media (max-width: 980px) {
+  .panel__img--keyaki {
+    height: 273px;
+  }
+}
+
+
+.highlight-teaching {
+  color: #67f7b8;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgb(103 247 184 / 30%);
+}
+
