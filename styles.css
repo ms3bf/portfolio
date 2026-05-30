@@ -362,6 +362,8 @@ a:hover {
   font-size: 0.96rem;
   font-weight: 600;
   letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex: 0 0 auto;
   cursor: pointer;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
