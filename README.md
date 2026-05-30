@@ -1,6 +1,6 @@
 ﻿# Portfolio
 
-公開ページ: https://ms3bf.github.io/portfolio/
+公開ページ: https://portfolio-lake-alpha-12.vercel.app/
 
 藤原正人のポートフォリオサイトです。
 
