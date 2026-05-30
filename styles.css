@@ -34,9 +34,25 @@ body {
   font-family: var(--body);
   font-size: 16px;
   line-height: 1.7;
+  padding-bottom: 84px; /* room for bottom nav */
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+
+/* ── Tab panels ─────────────────────────────── */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.is-active {
+  display: block;
+  animation: fade-in 0.3s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 h1, h2, h3, h4 {
@@ -101,11 +117,88 @@ video {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--muted);
+  background: none;
+  border: none;
+  font-family: var(--body);
+  cursor: pointer;
+  padding: 4px 2px;
   transition: color 0.2s ease;
 }
 
 .site-nav a:hover {
   color: var(--primary);
+}
+
+.site-nav a.is-active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .site-nav {
+    display: none;
+  }
+}
+
+/* ── Bottom navigation (SNS-style) ──────────── */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 60;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 72px;
+  background: rgb(14 14 14 / 92%);
+  border-top: 1px solid var(--outline-variant);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.bottom-nav button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: var(--body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 4px;
+  transition: color 0.2s ease;
+}
+
+.bottom-nav button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.bottom-nav button:hover {
+  color: var(--text);
+}
+
+.bottom-nav button.is-active {
+  color: var(--primary);
+}
+
+.bottom-nav button.is-active .nav-dot {
+  opacity: 1;
+}
+
+.nav-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--primary);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 /* ── Layout ─────────────────────────────────── */
@@ -392,57 +485,57 @@ section:last-child {
   margin-top: 16px;
 }
 
-/* ── Achievements rows ──────────────────────── */
+/* ── Achievement cards ──────────────────────── */
 .achv {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-
-.achv-row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid var(--outline-variant);
-}
-
-.achv-row:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+  gap: 24px;
 }
 
 @media (min-width: 768px) {
-  .achv-row {
-    grid-template-columns: 1fr 3fr;
-    gap: 24px;
+  .achv {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-.achv-row__label {
-  margin: 0;
+.achv-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: 12px;
+  padding: 24px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.achv-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.achv-card__label {
+  margin: 0 0 12px;
   color: var(--primary);
   font-family: var(--headline);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding-top: 4px;
 }
 
-.achv-row__body h3 {
-  margin: 0 0 8px;
-  font-size: 1.15rem;
+.achv-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
-.achv-row__body p {
-  margin: 0 0 8px;
+.achv-card p {
+  margin: 0 0 10px;
   color: var(--muted);
   font-size: 0.95rem;
 }
 
-.achv-row__body .list {
+.achv-card .list {
   margin-top: 4px;
 }
 
@@ -570,8 +663,10 @@ section:last-child {
 
 /* ── Footer ─────────────────────────────────── */
 footer {
+  margin-top: 64px;
   background: var(--surface-low);
-  border-top: 1px solid var(--outline-variant);
+  border: 1px solid var(--outline-variant);
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -579,7 +674,7 @@ footer {
   text-align: center;
   color: var(--muted);
   font-size: 0.85rem;
-  padding: 40px 20px 48px;
+  padding: 32px 20px;
 }
 
 footer p {
@@ -604,11 +699,6 @@ footer a:hover {
 
 /* ── Responsive ─────────────────────────────── */
 @media (max-width: 560px) {
-  .site-nav {
-    gap: 14px;
-    font-size: 0.8rem;
-  }
-
   .project__media {
     height: 300px;
   }

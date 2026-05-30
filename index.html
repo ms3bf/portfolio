@@ -22,142 +22,148 @@
       <h2 class="brand__name">藤原 正人</h2>
     </div>
     <nav class="site-nav">
-      <a href="#about">概要</a>
-      <a href="#skills">スキル</a>
-      <a href="#achievements">実績</a>
-      <a href="#projects">プロジェクト</a>
+      <a class="is-active" data-tab="home">ホーム</a>
+      <a data-tab="skills">スキル</a>
+      <a data-tab="achievements">実績</a>
+      <a data-tab="projects">プロジェクト</a>
     </nav>
   </header>
 
   <main>
     <div class="container">
-      <!-- Hero -->
-      <section class="hero">
-        <img src="assets/images/profile/IMG_2156.JPG" alt="藤原正人のプロフィール写真" class="hero__avatar" />
-        <div class="hero__body">
-          <div>
-            <h1 class="hero__name">藤原 正人</h1>
-            <p class="hero__role">クオンツ・金融分野志望</p>
+      <!-- ══ HOME tab (Hero + About) ══ -->
+      <div class="tab-panel is-active" data-panel="home">
+        <section class="hero">
+          <img src="assets/images/profile/IMG_2156.JPG" alt="藤原正人のプロフィール写真" class="hero__avatar" />
+          <div class="hero__body">
+            <div>
+              <h1 class="hero__name">藤原 正人</h1>
+              <p class="hero__role">クオンツ・金融分野志望</p>
+            </div>
+            <p class="hero__lead">板読みAI・将棋AIの開発者。目隠しルービックキューブでアジア2位、日本記録を3回更新。金融工学を専攻し、データ前処理から学習・検証までを自ら一貫して手がけ、再現性のある成果につなげてきました。</p>
+            <div class="link-row">
+              <a href="https://github.com/ms3bf" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.worldcubeassociation.org/persons/2019FUJI07" target="_blank" rel="noopener noreferrer">WCA Profile</a>
+              <a href="mailto:ue241068@cc.seikei.ac.jp">Email</a>
+            </div>
           </div>
-          <p class="hero__lead">板読みAI・将棋AIの開発者。目隠しルービックキューブでアジア2位、日本記録を3回更新。金融工学を専攻し、データ前処理から学習・検証までを自ら一貫して手がけ、再現性のある成果につなげてきました。</p>
-          <div class="link-row">
-            <a href="https://github.com/ms3bf" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.worldcubeassociation.org/persons/2019FUJI07" target="_blank" rel="noopener noreferrer">WCA Profile</a>
-            <a href="mailto:ue241068@cc.seikei.ac.jp">Email</a>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- About -->
-      <section id="about">
-        <h2 class="section-title">概要</h2>
-        <div class="about-grid">
-          <div class="about-item">
-            <span class="about-item__icon" aria-hidden="true">
-              <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
-            </span>
-            <div>
-              <h3>再現性のある成果</h3>
-              <p>目隠しルービックキューブ アジア2位・日本記録を3回更新。一つの目標を頂点まで突き詰めた経験があります。</p>
+        <section>
+          <h2 class="section-title">概要</h2>
+          <p class="section-sub">強みと取り組みのハイライト。</p>
+          <div class="about-grid">
+            <div class="about-item">
+              <span class="about-item__icon" aria-hidden="true">
+                <svg fill="currentColor" height="22" viewBox="0 0 256 256" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+              </span>
+              <div>
+                <h3>再現性のある成果</h3>
+                <p>目隠しルービックキューブ アジア2位・日本記録を3回更新。一つの目標を頂点まで突き詰めた経験があります。</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="about-item__icon" aria-hidden="true">
+                <svg fill="currentColor" height="22" viewBox="0 0 256 256" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+              </span>
+              <div>
+                <h3>板読みAIの開発</h3>
+                <p>日本株の板情報を対象に、要件定義・データ前処理・モデル構築（TLOB / Transformer）・バックテストまでを自ら一貫して実施。</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="about-item__icon" aria-hidden="true">
+                <svg fill="currentColor" height="22" viewBox="0 0 256 256" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+              </span>
+              <div>
+                <h3>将棋AIの開発</h3>
+                <p>大規模ResUNetを設計・学習し、世界コンピュータ将棋選手権に2年連続出場。一次予選37チーム中4位で予選を突破。</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="about-item__icon" aria-hidden="true">
+                <svg fill="currentColor" height="22" viewBox="0 0 256 256" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+              </span>
+              <div>
+                <h3>データ分析・モデリング</h3>
+                <p>R / Python による時系列データの前処理・回帰分析。タスクに応じて適切な手法を選び、学習・検証を完遂できる点が強みです。</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="about-item__icon" aria-hidden="true">
+                <svg fill="currentColor" height="22" viewBox="0 0 256 256" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+              </span>
+              <div>
+                <h3>金融知識</h3>
+                <p>金融工学を専攻。日本証券アナリスト協会CMAに挑戦中、簿記2級取得。四季報や日経新聞の購読を日課とし、市場と経済への関心が高いです。</p>
+              </div>
+            </div>
+            <div class="about-item">
+              <span class="about-item__icon" aria-hidden="true">
+                <svg fill="currentColor" height="22" viewBox="0 0 256 256" width="22" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
+              </span>
+              <div>
+                <h3>学歴・研究</h3>
+                <p>成蹊大学 経済学部 経済数理学科 3年（金融工学専攻）。ゼミではMCMCによる日経平均予測、CAPM理論に基づく個別銘柄リターン予測に取り組んでいます。</p>
+              </div>
             </div>
           </div>
-          <div class="about-item">
-            <span class="about-item__icon" aria-hidden="true">
-              <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
-            </span>
-            <div>
-              <h3>板読みAIの開発</h3>
-              <p>日本株の板情報を対象に、要件定義・データ前処理・モデル構築（TLOB / Transformer）・バックテストまでを自ら一貫して実施。</p>
-            </div>
-          </div>
-          <div class="about-item">
-            <span class="about-item__icon" aria-hidden="true">
-              <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
-            </span>
-            <div>
-              <h3>将棋AIの開発</h3>
-              <p>大規模ResUNetを設計・学習し、世界コンピュータ将棋選手権に2年連続出場。一次予選37チーム中4位で予選を突破。</p>
-            </div>
-          </div>
-          <div class="about-item">
-            <span class="about-item__icon" aria-hidden="true">
-              <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
-            </span>
-            <div>
-              <h3>データ分析・モデリング</h3>
-              <p>R / Python による時系列データの前処理・回帰分析。タスクに応じて適切な手法を選び、学習・検証を完遂できる点が強みです。</p>
-            </div>
-          </div>
-          <div class="about-item">
-            <span class="about-item__icon" aria-hidden="true">
-              <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
-            </span>
-            <div>
-              <h3>金融知識</h3>
-              <p>金融工学を専攻。日本証券アナリスト協会CMAに挑戦中、簿記2級取得。四季報や日経新聞の購読を日課とし、市場と経済への関心が高いです。</p>
-            </div>
-          </div>
-          <div class="about-item">
-            <span class="about-item__icon" aria-hidden="true">
-              <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path></svg>
-            </span>
-            <div>
-              <h3>学歴・研究</h3>
-              <p>成蹊大学 経済学部 経済数理学科 3年（金融工学専攻）。ゼミではマルコフ連鎖モンテカルロ法（MCMC）による日経平均予測、CAPM理論に基づく個別銘柄リターン予測に取り組んでいます。</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      <!-- Skills -->
-      <section id="skills">
-        <h2 class="section-title">スキル・資格</h2>
-        <div class="skills-grid">
-          <div class="card">
-            <h3>AI・機械学習開発</h3>
-            <p class="muted-note">要件定義・データ前処理・モデル構築・学習・検証まで、自らの手で一貫して取り組んできました。タスクに応じて適切なアーキテクチャを選び、学習を完遂できる点が強みです。</p>
-            <ul class="list" style="margin-top:16px;">
-              <li><strong>将棋AI</strong>：大規模ResUNet（PyTorch）を設計・学習。世界コンピュータ将棋選手権に2年連続出場し、一次予選37チーム中4位で予選を突破。</li>
-              <li><strong>板読みAI</strong>：日本株の板情報を対象に、要件定義・データ前処理・TLOB（Transformer for Limit Order Book）の構築・学習・バックテストまでを一貫して実施。</li>
-              <li><strong>ルービックキューブ手順</strong>：LightGBM（勾配ブースティング）で手順の回しやすさを学習・点数化。</li>
-            </ul>
-            <h4>データ分析・開発</h4>
-            <ul class="list">
-              <li>R / Python による時系列データの前処理・回帰分析・可視化</li>
-              <li>要件定義から設計・実装・検証までを自ら手がけ、複数のWebアプリを制作・公開</li>
-            </ul>
-            <h4>金融・市場への取り組み</h4>
-            <ul class="list">
-              <li>3ファクターモデルによる銘柄選択（複数の指標から判断）。分析結果の可視化を重視</li>
-            </ul>
-            <img src="assets/images/products/boardAI.png" alt="板読みAIの分析画像" class="card__img" />
-            <img src="assets/images/products/frontier_lowcorr_5y_5m.png" alt="効率的フロンティアの可視化画像" class="card__img" />
-          </div>
+      <!-- ══ SKILLS tab ══ -->
+      <div class="tab-panel" data-panel="skills">
+        <section>
+          <h2 class="section-title">スキル・資格</h2>
+          <p class="section-sub">技術スタックと保有資格。</p>
+          <div class="skills-grid">
+            <div class="card">
+              <h3>AI・機械学習開発</h3>
+              <p class="muted-note">要件定義・データ前処理・モデル構築・学習・検証まで、自らの手で一貫して取り組んできました。タスクに応じて適切なアーキテクチャを選び、学習を完遂できる点が強みです。</p>
+              <ul class="list" style="margin-top:16px;">
+                <li><strong>将棋AI</strong>：大規模ResUNet（PyTorch）を設計・学習。世界コンピュータ将棋選手権に2年連続出場し、一次予選37チーム中4位で予選を突破。</li>
+                <li><strong>板読みAI</strong>：日本株の板情報を対象に、要件定義・データ前処理・TLOB（Transformer for Limit Order Book）の構築・学習・バックテストまでを一貫して実施。</li>
+                <li><strong>ルービックキューブ手順</strong>：LightGBM（勾配ブースティング）で手順の回しやすさを学習・点数化。</li>
+              </ul>
+              <h4>データ分析・開発</h4>
+              <ul class="list">
+                <li>R / Python による時系列データの前処理・回帰分析・可視化</li>
+                <li>要件定義から設計・実装・検証までを自ら手がけ、複数のWebアプリを制作・公開</li>
+              </ul>
+              <h4>金融・市場への取り組み</h4>
+              <ul class="list">
+                <li>3ファクターモデルによる銘柄選択（複数の指標から判断）。分析結果の可視化を重視</li>
+              </ul>
+              <img src="assets/images/products/boardAI.png" alt="板読みAIの分析画像" class="card__img" />
+              <img src="assets/images/products/frontier_lowcorr_5y_5m.png" alt="効率的フロンティアの可視化画像" class="card__img" />
+            </div>
 
-          <div class="card">
-            <h3>資格</h3>
-            <ul class="list">
-              <li>基本情報技術者（2026/2 取得）</li>
-              <li>簿記2級（2026/3 取得）</li>
-              <li>日本証券アナリスト協会 CMA（挑戦中）</li>
-              <li>数学検定 準1級（1級に向けて学習中）</li>
-            </ul>
-            <h4>趣味</h4>
-            <ul class="list">
-              <li>将棋：大学から始めて初段。成蹊大学の団体戦（2025年）でC2クラス優勝。</li>
-              <li>読書：ウォール街の投資家たちの伝記などを愛読。</li>
-            </ul>
+            <div class="card">
+              <h3>資格</h3>
+              <ul class="list">
+                <li>基本情報技術者（2026/2 取得）</li>
+                <li>簿記2級（2026/3 取得）</li>
+                <li>日本証券アナリスト協会 CMA（挑戦中）</li>
+                <li>数学検定 準1級（1級に向けて学習中）</li>
+              </ul>
+              <h4>趣味</h4>
+              <ul class="list">
+                <li>将棋：大学から始めて初段。成蹊大学の団体戦（2025年）でC2クラス優勝。</li>
+                <li>読書：ウォール街の投資家たちの伝記などを愛読。</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      <!-- Achievements -->
-      <section id="achievements">
-        <h2 class="section-title">実績</h2>
-        <div class="achv">
-          <div class="achv-row">
-            <p class="achv-row__label">ルービックキューブ</p>
-            <div class="achv-row__body">
+      <!-- ══ ACHIEVEMENTS tab ══ -->
+      <div class="tab-panel" data-panel="achievements">
+        <section>
+          <h2 class="section-title">実績</h2>
+          <p class="section-sub">競技・開発・メディア・教育・チーム活動。</p>
+          <div class="achv">
+            <article class="achv-card">
+              <p class="achv-card__label">ルービックキューブ</p>
               <h3>目隠しルービックキューブ アジア2位</h3>
               <p>Rubik's WCA Asian Championship 2024 準優勝。日本記録を3回更新し、国内外で数々の実績を残しています。</p>
               <ul class="list">
@@ -175,20 +181,16 @@
                 <img src="assets/images/achievements/IMG_4564.PNG" alt="大会実績画像 2" />
                 <img src="assets/images/achievements/IMG_0443.JPG" alt="大会実績画像 3" />
               </div>
-            </div>
-          </div>
+            </article>
 
-          <div class="achv-row">
-            <p class="achv-row__label">将棋AI</p>
-            <div class="achv-row__body">
+            <article class="achv-card">
+              <p class="achv-card__label">将棋AI</p>
               <h3>世界コンピュータ将棋選手権 出場</h3>
               <p>大規模ResUNetを設計・学習し、2年連続で出場。一次予選37チーム中4位で予選を突破しました。</p>
-            </div>
-          </div>
+            </article>
 
-          <div class="achv-row">
-            <p class="achv-row__label">プロ・メディア活動</p>
-            <div class="achv-row__body">
+            <article class="achv-card">
+              <p class="achv-card__label">プロ・メディア活動</p>
               <h3>テレビ出演</h3>
               <ul class="list">
                 <li>ニノさん（2022年7月放映 / 2023年1月放映）</li>
@@ -202,12 +204,10 @@
                 <img src="assets/images/media/IMG_0035.PNG" alt="メディア出演画像 1" />
                 <img src="assets/images/media/IMG_4565.JPG" alt="メディア出演画像 2" />
               </div>
-            </div>
-          </div>
+            </article>
 
-          <div class="achv-row">
-            <p class="achv-row__label">教育</p>
-            <div class="achv-row__body">
+            <article class="achv-card">
+              <p class="achv-card__label">教育</p>
               <h3>のべ200人以上に指導</h3>
               <ul class="list">
                 <li>目隠しルービックキューブのHowTo動画が8万再生。コミュニティで最も多く再生されている。</li>
@@ -226,12 +226,10 @@
                 <img src="assets/images/teaching/IMG_4559.PNG" alt="塾提携イベントの指導画像 2" />
                 <img src="assets/images/teaching/IMG_4560.PNG" alt="塾提携イベントの指導画像 3" />
               </div>
-            </div>
-          </div>
+            </article>
 
-          <div class="achv-row">
-            <p class="achv-row__label">チームプロジェクト</p>
-            <div class="achv-row__body">
+            <article class="achv-card">
+              <p class="achv-card__label">チームプロジェクト</p>
               <h3>成蹊大学文化会 模擬店リーダー</h3>
               <ul class="list">
                 <li>成蹊大学文化会Instagram運用・模擬店リーダーを担当</li>
@@ -246,103 +244,152 @@
                 <img src="assets/images/keyaki/IMG_3080.JPG" alt="文化祭活動画像 2" />
                 <img src="assets/images/keyaki/IMG_4566.JPG" alt="文化祭活動画像 3" />
               </div>
-            </div>
+            </article>
           </div>
+        </section>
+      </div>
+
+      <!-- ══ PROJECTS tab ══ -->
+      <div class="tab-panel" data-panel="projects">
+        <section>
+          <h2 class="section-title">プロジェクト</h2>
+          <p class="section-sub">要件定義から設計・実装・公開までを自ら手がけて制作したWebアプリ。各デモはVercelで公開しています。</p>
+          <div class="projects">
+            <article class="project">
+              <a class="project__media" href="https://ode-quiz.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="4択クイズ デモを開く">
+                <video src="assets/images/products/ode-quiz.mp4" autoplay muted loop playsinline preload="metadata"></video>
+              </a>
+              <div class="project__body">
+                <h3 class="project__title">4択クイズ</h3>
+                <div class="tags">
+                  <span class="tag tag--primary">Web App</span>
+                  <span class="tag tag--cyan">微分方程式</span>
+                </div>
+                <p class="project__desc">微分方程式のWebアプリ。</p>
+                <a class="project__link" href="https://ode-quiz.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <a class="project__media" href="https://board-game-omega.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="デモトレ デモを開く">
+                <video src="assets/images/products/board_game.mp4" autoplay muted loop playsinline preload="metadata"></video>
+              </a>
+              <div class="project__body">
+                <h3 class="project__title">デモトレ</h3>
+                <div class="tags">
+                  <span class="tag tag--primary">Web App</span>
+                  <span class="tag tag--cyan">日本株</span>
+                </div>
+                <p class="project__desc">日本株を模した疑似板による本格デモトレアプリ。</p>
+                <a class="project__link" href="https://board-game-omega.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <a class="project__media" href="https://moving-algorithm-11dp.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="うごく手順表 デモを開く">
+                <video src="assets/images/products/moving-algorithm.mp4" autoplay muted loop playsinline preload="metadata"></video>
+              </a>
+              <div class="project__body">
+                <h3 class="project__title">うごく手順表</h3>
+                <div class="tags">
+                  <span class="tag tag--primary">Web App</span>
+                  <span class="tag tag--cyan">可視化</span>
+                </div>
+                <p class="project__desc">ルービックキューブの基本手順 F2L・OLL・PLL を一番分かりやすく可視化。</p>
+                <a class="project__link" href="https://moving-algorithm-11dp.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <a class="project__media" href="https://bl-dviewer.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="BLD viewer デモを開く">
+                <img src="assets/images/products/bl-dviewer.jpg" alt="BLD viewer スクリーンショット" />
+              </a>
+              <div class="project__body">
+                <h3 class="project__title">BLD viewer</h3>
+                <div class="tags">
+                  <span class="tag tag--primary">Web App</span>
+                  <span class="tag tag--cyan">スクランブラ</span>
+                </div>
+                <p class="project__desc">目隠しルービックキューブの配色へのナンバリングを可視化。プロ向け本格スクランブラも搭載。</p>
+                <a class="project__link" href="https://bl-dviewer.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <a class="project__media" href="https://human-friendly-sorter.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="human-friendly-sorter デモを開く">
+                <img src="assets/images/products/human-friendly-sorter.jpg" alt="human-friendly-sorter スクリーンショット" />
+              </a>
+              <div class="project__body">
+                <h3 class="project__title">human-friendly-sorter</h3>
+                <div class="tags">
+                  <span class="tag tag--primary">機械学習</span>
+                  <span class="tag tag--cyan">LightGBM</span>
+                </div>
+                <p class="project__desc">手順の回しやすさを15,000の特徴量から機械学習。一目で人間が回しやすい手順を点数化。</p>
+                <a class="project__link" href="https://human-friendly-sorter.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <p style="font-family:var(--headline);font-weight:700;color:var(--text);font-size:1.1rem;">藤原 正人</p>
+        <div class="footer-links">
+          <a href="https://github.com/ms3bf" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.worldcubeassociation.org/persons/2019FUJI07" target="_blank" rel="noopener noreferrer">WCA</a>
+          <a href="mailto:ue241068@cc.seikei.ac.jp">Email</a>
         </div>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects">
-        <h2 class="section-title">プロジェクト</h2>
-        <p class="muted-note" style="margin-bottom:24px;">要件定義から設計・実装・公開までを自ら手がけて制作したWebアプリ。各デモはVercelで公開しています。</p>
-        <div class="projects">
-          <article class="project">
-            <a class="project__media" href="https://ode-quiz.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="4択クイズ デモを開く">
-              <video src="assets/images/products/ode-quiz.mp4" autoplay muted loop playsinline preload="metadata"></video>
-            </a>
-            <div class="project__body">
-              <h3 class="project__title">4択クイズ</h3>
-              <div class="tags">
-                <span class="tag tag--primary">Web App</span>
-                <span class="tag tag--cyan">微分方程式</span>
-              </div>
-              <p class="project__desc">微分方程式のWebアプリ。</p>
-              <a class="project__link" href="https://ode-quiz.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <a class="project__media" href="https://board-game-omega.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="デモトレ デモを開く">
-              <video src="assets/images/products/board_game.mp4" autoplay muted loop playsinline preload="metadata"></video>
-            </a>
-            <div class="project__body">
-              <h3 class="project__title">デモトレ</h3>
-              <div class="tags">
-                <span class="tag tag--primary">Web App</span>
-                <span class="tag tag--cyan">日本株</span>
-              </div>
-              <p class="project__desc">日本株を模した疑似板による本格デモトレアプリ。</p>
-              <a class="project__link" href="https://board-game-omega.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <a class="project__media" href="https://moving-algorithm-11dp.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="うごく手順表 デモを開く">
-              <video src="assets/images/products/moving-algorithm.mp4" autoplay muted loop playsinline preload="metadata"></video>
-            </a>
-            <div class="project__body">
-              <h3 class="project__title">うごく手順表</h3>
-              <div class="tags">
-                <span class="tag tag--primary">Web App</span>
-                <span class="tag tag--cyan">可視化</span>
-              </div>
-              <p class="project__desc">ルービックキューブの基本手順 F2L・OLL・PLL を一番分かりやすく可視化。</p>
-              <a class="project__link" href="https://moving-algorithm-11dp.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <a class="project__media" href="https://bl-dviewer.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="BLD viewer デモを開く">
-              <img src="assets/images/products/bl-dviewer.jpg" alt="BLD viewer スクリーンショット" />
-            </a>
-            <div class="project__body">
-              <h3 class="project__title">BLD viewer</h3>
-              <div class="tags">
-                <span class="tag tag--primary">Web App</span>
-                <span class="tag tag--cyan">スクランブラ</span>
-              </div>
-              <p class="project__desc">目隠しルービックキューブの配色へのナンバリングを可視化。プロ向け本格スクランブラも搭載。</p>
-              <a class="project__link" href="https://bl-dviewer.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <a class="project__media" href="https://human-friendly-sorter.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="human-friendly-sorter デモを開く">
-              <img src="assets/images/products/human-friendly-sorter.jpg" alt="human-friendly-sorter スクリーンショット" />
-            </a>
-            <div class="project__body">
-              <h3 class="project__title">human-friendly-sorter</h3>
-              <div class="tags">
-                <span class="tag tag--primary">機械学習</span>
-                <span class="tag tag--cyan">LightGBM</span>
-              </div>
-              <p class="project__desc">手順の回しやすさを15,000の特徴量から機械学習。一目で人間が回しやすい手順を点数化。</p>
-              <a class="project__link" href="https://human-friendly-sorter.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
-            </div>
-          </article>
-        </div>
-      </section>
+        <p>© 2026 Masato Fujiwara Portfolio</p>
+      </footer>
     </div>
   </main>
 
-  <footer>
-    <p style="font-family:var(--headline);font-weight:700;color:var(--text);font-size:1.1rem;">藤原 正人</p>
-    <div class="footer-links">
-      <a href="https://github.com/ms3bf" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://www.worldcubeassociation.org/persons/2019FUJI07" target="_blank" rel="noopener noreferrer">WCA</a>
-      <a href="mailto:ue241068@cc.seikei.ac.jp">Email</a>
-    </div>
-    <p>© 2026 Masato Fujiwara Portfolio</p>
-  </footer>
+  <!-- Bottom navigation (SNS-style) -->
+  <nav class="bottom-nav" aria-label="セクション切替">
+    <button type="button" class="is-active" data-tab="home" aria-pressed="true">
+      <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path></svg>
+      <span>ホーム</span>
+      <span class="nav-dot" aria-hidden="true"></span>
+    </button>
+    <button type="button" data-tab="skills" aria-pressed="false">
+      <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"></path></svg>
+      <span>スキル</span>
+      <span class="nav-dot" aria-hidden="true"></span>
+    </button>
+    <button type="button" data-tab="achievements" aria-pressed="false">
+      <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M232,64H208V56a16,16,0,0,0-16-16H64A16,16,0,0,0,48,56v8H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm184-24a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"></path></svg>
+      <span>実績</span>
+      <span class="nav-dot" aria-hidden="true"></span>
+    </button>
+    <button type="button" data-tab="projects" aria-pressed="false">
+      <svg fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM128,40a88,88,0,1,0,88,88A88.1,88.1,0,0,0,128,40Z" style="display:none"></path><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM88,96v64a8,8,0,0,1-16,0V96a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V96a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V96a8,8,0,0,1,16,0Z"></path></svg>
+      <span>プロジェクト</span>
+      <span class="nav-dot" aria-hidden="true"></span>
+    </button>
+  </nav>
+
+  <script>
+    const tabButtons = document.querySelectorAll('[data-tab]');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    function switchTab(target) {
+      tabButtons.forEach((btn) => {
+        const active = btn.dataset.tab === target;
+        btn.classList.toggle('is-active', active);
+        if (btn.hasAttribute('aria-pressed')) {
+          btn.setAttribute('aria-pressed', String(active));
+        }
+      });
+      panels.forEach((panel) => {
+        panel.classList.toggle('is-active', panel.dataset.panel === target);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+    });
+  </script>
 </body>
 </html>
