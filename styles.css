@@ -487,19 +487,15 @@ a:hover {
     height: 273px;
   }
 
-  .apps {
-    grid-template-columns: 1fr;
+  .app-card__media {
+    height: 300px;
   }
 
-  .app-card__media {
-    height: 360px;
+  .app-card__body {
+    padding: 14px 14px 16px;
   }
 
   .hero__photo {
     max-height: 300px;
-  }
-
-  .tab-switch {
-    overflow-x: auto;
   }
 }
