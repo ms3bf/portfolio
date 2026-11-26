@@ -125,10 +125,10 @@ main { min-height: 45vh; }
 .app-card {
   border-top: 1px solid var(--soft-rule);
   display: grid;
-  grid-template-columns: 104px minmax(0,1fr);
+  grid-template-columns: 176px minmax(0,1fr);
   gap: 22px;
   align-items: start;
-  padding-block: 14px;
+  padding-block: 3px;
 }
 .app-card__media {
   display: block;
@@ -138,9 +138,11 @@ main { min-height: 45vh; }
   width: 100%;
   height: auto;
 }
+.app-card__body { align-self: center; padding-block: 6px; }
 .app-card__title { font-size: clamp(1.25rem, 2.75vw, 1.8rem); font-weight: 900; }
 .tags { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: .875rem; margin: 4px 0 5px; color: var(--muted); }
 .tag + .tag { border-inline-start: 1px solid var(--soft-rule); padding-inline-start: 10px; }
+.app-card__details summary { display: none; }
 .app-card__desc { max-width: 36em; }
 .app-card__link { display: inline-block; margin-top: 7px; }
 .panel__gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin-block: 14px 4px; align-items: start; }
@@ -196,7 +198,19 @@ footer p + p { margin-top: 4px; }
   .career-log__entry { grid-template-columns: minmax(0,1fr); gap: 4px; padding-left: 12px; padding-bottom: 17px; }
   .career-log__meta { line-height: 1.45; }
   .career__qualifications ul, .panel__gallery { grid-template-columns: minmax(0,1fr); }
-  .app-card { grid-template-columns: 74px minmax(0,1fr); gap: 12px; padding-block: 12px; }
+  .app-card { grid-template-columns: clamp(100px, 32vw, 136px) minmax(0,1fr); gap: 12px; }
+  .app-card__title { font-size: 1.15rem; }
+  .app-card__desc { font-size: .94rem; line-height: 1.65; }
+  .app-card__details summary {
+    display: list-item;
+    width: fit-content;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: .85rem;
+    padding-block: 3px;
+  }
+  .app-card__details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .app-card__details[open] .app-card__desc { margin-top: 4px; }
   .panel__gallery { gap: 8px; }
   [data-tab-panel]:not([data-tab-panel="summary"]) > .panel:first-of-type { padding-top: 22px; }
   .bottom-nav {

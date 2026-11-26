@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Portfolio | 藤原正人</title>
   <meta name="description" content="藤原正人のポートフォリオ。クオンツ・金融志望。データ分析・AIエージェント活用と、目隠しルービックキューブのアジア2位・日本記録の実績。">
-  <link rel="stylesheet" href="styles.css?v=20261127-c"></head>
+  <link rel="stylesheet" href="styles.css?v=20261127-apps"></head>
 <body>
   <nav class="bottom-nav" aria-label="セクション切替">
     <div class="nav-inner"><button type="button" class="is-active" data-tab-target="summary" aria-pressed="true">
@@ -15,7 +15,7 @@
     </button>
     <button type="button" data-tab-target="skills" aria-pressed="false">
       <svg viewbox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"></path></svg>
-      <span>スキル・資格</span>
+      <span>開発・資格</span>
       <span class="nav-dot" aria-hidden="true"></span>
     </button>
     <button type="button" data-tab-target="rubik" aria-pressed="false">
@@ -134,7 +134,10 @@
                 <span class="tag tag--primary">ルービックキューブ</span>
                 <span class="tag tag--soft">3D / 指遣い学習</span>
               </div>
-              <p class="app-card__desc">世界初の、ルービックキューブの指遣いを機械学習・可視化したアプリ。3Dの手とキューブで、各手順の指の動きを直感的に確認できます。</p>
+              <details class="app-card__details" open>
+                <summary>説明を読む</summary>
+                <p class="app-card__desc">世界初の、ルービックキューブの指遣いを機械学習・可視化したアプリ。3Dの手とキューブで、各手順の指の動きを直感的に確認できます。</p>
+              </details>
               <a class="app-card__link" href="https://yubi-gui.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
             </div>
           </article>
@@ -149,7 +152,10 @@
                 <span class="tag tag--primary">将棋AI</span>
                 <span class="tag tag--soft">文化祭 / 対戦アプリ</span>
               </div>
-              <p class="app-card__desc">成蹊大学の文化祭で、来場者がAI将棋と対戦する企画に使用したアプリを公開。ブラウザ上でAIとの対局を楽しめます。</p>
+              <details class="app-card__details" open>
+                <summary>説明を読む</summary>
+                <p class="app-card__desc">成蹊大学の文化祭で、来場者がAI将棋と対戦する企画に使用したアプリを公開。ブラウザ上でAIとの対局を楽しめます。</p>
+              </details>
               <a class="app-card__link" href="https://komanoma-shogi.vercel.app" target="_blank" rel="noopener noreferrer">対局する →</a>
             </div>
           </article>
@@ -164,7 +170,10 @@
                 <span class="tag tag--primary">金融工学</span>
                 <span class="tag tag--soft">MCMC / CAPM</span>
               </div>
-              <p class="app-card__desc">マルコフ連鎖モンテカルロ法（MCMC）による日経平均の予測と、その推定値を用いたCAPM理論に基づく個別株リターン予想。さらにFama-Frenchの<span class="numeric">3</span>ファクターモデルを用いて、日本株が各因子をどれほど持っているかをプロットしました。</p>
+              <details class="app-card__details" open>
+                <summary>説明を読む</summary>
+                <p class="app-card__desc">マルコフ連鎖モンテカルロ法（MCMC）による日経平均の予測と、その推定値を用いたCAPM理論に基づく個別株リターン予想。さらにFama-Frenchの<span class="numeric">3</span>ファクターモデルを用いて、日本株が各因子をどれほど持っているかをプロットしました。</p>
+              </details>
               <a class="app-card__link" href="https://3factor-simulation.vercel.app/" target="_blank" rel="noopener noreferrer">デモを見る →</a>
             </div>
           </article>
@@ -179,29 +188,15 @@
                 <span class="tag tag--primary">Web App</span>
                 <span class="tag tag--soft">可視化</span>
               </div>
-              <p class="app-card__desc">ルービックキューブの基本手順 F2L・OLL・PLL を一番分かりやすく可視化。</p>
+              <details class="app-card__details" open>
+                <summary>説明を読む</summary>
+                <p class="app-card__desc">ルービックキューブの基本手順 F2L・OLL・PLL を一番分かりやすく可視化。</p>
+              </details>
               <a class="app-card__link" href="https://moving-algorithm-11dp.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
             </div>
           </article>
 
         </div>
-      </section>
-
-      <section class="panel panel--index">
-        <h2>AI・機械学習開発</h2>
-        <p class="muted">要件定義・データ前処理・モデル構築・学習・検証まで、一貫して取り組んできました。</p>
-        <ul>
-          <li>将棋AI：大規模ResUNet学習。世界コンピュータ将棋選手権に<span class="numeric">2</span>年連続出場し、一次予選<span class="numeric">37</span>チーム中<span class="numeric">4</span>位で予選を突破。</li>
-          <li>ルービックキューブ手順：<br>手順の回しやすさを学習・点数化。</li>
-        </ul>
-      </section>
-
-      <section class="panel panel--index">
-        <h2>データ分析・開発</h2>
-        <ul>
-          <li>R / Python による時系列データの前処理・回帰分析・可視化</li>
-          <li>要件定義から設計・実装・検証までを自ら手がけ、複数のWebアプリを制作・公開（下記「制作Webアプリ」参照）</li>
-        </ul>
       </section>
 
       <section class="panel panel--index panel--qualifications">
@@ -331,6 +326,15 @@
   <script>
     const navButtons = document.querySelectorAll('.bottom-nav button');
     const panels = document.querySelectorAll('.tab-content');
+
+    const compactApps = window.matchMedia('(max-width: 680px)');
+    function setAppDetails() {
+      document.querySelectorAll('.app-card__details').forEach((details) => {
+        details.open = !compactApps.matches;
+      });
+    }
+    setAppDetails();
+    compactApps.addEventListener('change', setAppDetails);
 
     navButtons.forEach((button) => {
       button.addEventListener('click', () => {
