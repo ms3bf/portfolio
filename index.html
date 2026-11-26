@@ -1,14 +1,29 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Portfolio | 藤原正人</title>
-  <meta name="description" content="藤原正人のポートフォリオ。クオンツ・金融志望。データ分析・AIエージェント活用と、目隠しルービックキューブのアジア2位・日本記録の実績。" />
-  <link rel="stylesheet" href="styles.css?v=20261127-career" />
-</head>
+  <meta name="description" content="藤原正人のポートフォリオ。クオンツ・金融志望。データ分析・AIエージェント活用と、目隠しルービックキューブのアジア2位・日本記録の実績。">
+  <link rel="stylesheet" href="styles.css?v=20261127-c"></head>
 <body>
-  <div class="grid-overlay" aria-hidden="true"></div>
+  <nav class="bottom-nav" aria-label="セクション切替">
+    <div class="nav-inner"><button type="button" class="is-active" data-tab-target="summary" aria-pressed="true">
+      <svg viewbox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path></svg>
+      <span>サマリー</span>
+      <span class="nav-dot" aria-hidden="true"></span>
+    </button>
+    <button type="button" data-tab-target="skills" aria-pressed="false">
+      <svg viewbox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"></path></svg>
+      <span>スキル・資格</span>
+      <span class="nav-dot" aria-hidden="true"></span>
+    </button>
+    <button type="button" data-tab-target="rubik" aria-pressed="false">
+      <svg viewbox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M232,64H208V56a16,16,0,0,0-16-16H64A16,16,0,0,0,48,56v8H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm184-24a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"></path></svg>
+      <span>キューブ実績</span>
+      <span class="nav-dot" aria-hidden="true"></span>
+    </button>
+  </div></nav>
 
   <header class="hero">
     <div class="hero__inner">
@@ -22,43 +37,51 @@
           <a href="mailto:ue241068@cc.seikei.ac.jp">Email</a>
         </div>
       </div>
-      <img src="assets/images/profile/IMG_6793.jpeg" alt="藤原正人プロフィール写真" class="hero__photo" />
+      <img src="assets/images/profile/IMG_6793.jpeg" alt="藤原正人プロフィール写真" class="hero__photo" width="768" height="1024">
     </div>
   </header>
 
   <main>
     <div class="tab-content is-active" data-tab-panel="summary">
-      <section class="panel">
+      <section class="panel panel--index">
         <h2>サマリー</h2>
         <ul>
-          <li><strong>研究</strong>：日本株の26年分・全企業4000社の有価証券報告書の非財務情報をOCR・LLMでスコア化して 因子分析を行っています。</li>
-          <li><strong>将棋AIの開発</strong>：ResUNetを用いて20億局面を学習した「芽生将棋」で世界コンピュータ将棋選手権に2年連続出場。一次予選37チーム中4位で予選を突破。</li>
+          <li><strong>研究</strong>：日本株の<span class="numeric">26</span>年分・全企業<span class="numeric">4000</span>社の有価証券報告書の非財務情報をOCR・LLMでスコア化して 因子分析を行っています。</li>
+          <li><strong>将棋AIの開発</strong>：ResUNetを用いて<span class="numeric">20</span>億局面を学習した「芽生将棋」で世界コンピュータ将棋選手権に<span class="numeric">2</span>年連続出場。一次予選<span class="numeric">37</span>チーム中<span class="numeric">4</span>位で予選を突破。</li>
           <li><strong>データ分析・モデリング</strong>：Python による時系列データの前処理・回帰分析。適切な手法を選び、学習・検証を完遂できます。</li>
-          <li><strong>金融知識</strong>：日本証券アナリスト協会CMA試験1次レベルに合格、簿記2級取得。四季報や日経新聞の購読を日課とし、市場と経済への関心が高いです。</li>
+          <li><strong>金融知識</strong>：日本証券アナリスト協会CMA試験<span class="numeric">1</span>次レベルに合格、簿記<span class="numeric">2</span>級取得。四季報や日経新聞の購読を日課とし、市場と経済への関心が高いです。</li>
         </ul>
       </section>
 
-      <section class="panel career">
+      <section class="panel panel--index">
+        <h2>学歴・研究</h2>
+        <ul>
+          <li>成蹊大学 経済学部 経済数理学科 <span class="numeric">3</span>年（金融工学専攻）</li>
+          <li>ゼミ研究テーマ：LLMによる非財務情報のスコア化</li>
+          <li>上記をもとに、CAPM理論を拡張した個別銘柄のリターン予測に取り組んでいます</li>
+        </ul>
+      </section>
+    <section class="panel career panel--index">
         <div class="career__heading">
           <h2>来歴</h2>
           <span class="career__branch" aria-label="Gitログ風の来歴">main</span>
         </div>
         <ol class="career-log" aria-label="来歴のタイムライン">
           <li class="career-log__entry">
-            <div class="career-log__meta"><span class="career-log__year">2021 —</span></div>
+            <div class="career-log__meta"><span class="career-log__year"><span class="numeric">2021</span> —</span></div>
             <div class="career-log__card">
               <h3>ルービックキューブのプロ活動</h3>
 
         <ul>
-          <li>目隠しルービックキューブの日本記録を3回更新</li>
-          <li>国際大会で入賞（2024年アジア大会準優勝）</li>
-          <li>「ニノさん」「24時間テレビ」などのメディアに出演</li>
+          <li>目隠しルービックキューブの日本記録を<span class="numeric">3</span>回更新</li>
+          <li>国際大会で入賞（<span class="numeric">2024</span>年アジア大会準優勝）</li>
+          <li>「ニノさん」「<span class="numeric">24</span>時間テレビ」などのメディアに出演</li>
           <li>子ども向けのルービックキューブイベントを複数主催</li>
         </ul>
             </div>
           </li>
           <li class="career-log__entry">
-            <div class="career-log__meta"><span class="career-log__year">2024</span></div>
+            <div class="career-log__meta"><span class="career-log__year"><span class="numeric">2024</span></span></div>
             <div class="career-log__card">
               <h3>成蹊大学入学</h3>
 
@@ -66,7 +89,7 @@
             </div>
           </li>
           <li class="career-log__entry">
-            <div class="career-log__meta"><span class="career-log__year">2025</span></div>
+            <div class="career-log__meta"><span class="career-log__year"><span class="numeric">2025</span></span></div>
             <div class="career-log__card">
               <h3>世界コンピュータ将棋選手権 一次予選突破</h3>
 
@@ -74,11 +97,11 @@
             </div>
           </li>
           <li class="career-log__entry">
-            <div class="career-log__meta"><span class="career-log__year">2026</span> <span class="career-log__head">HEAD</span></div>
+            <div class="career-log__meta"><span class="career-log__year"><span class="numeric">2026</span></span> <span class="career-log__head">HEAD</span></div>
             <div class="career-log__card">
               <h3>世界コンピュータ将棋選手権 一次予選突破</h3>
 
-        <p>「芽生将棋」で2年連続の一次予選突破。</p>
+        <p>「芽生将棋」で<span class="numeric">2</span>年連続の一次予選突破。</p>
             </div>
           </li>
         </ol>
@@ -87,48 +110,23 @@
         <ul>
           <li>基本情報技術者</li>
           <li>応用情報技術者</li>
-          <li>日商簿記2級</li>
-          <li>日本証券アナリスト協会 CMA 第1次レベル試験合格</li>
-          <li>実用数学技能検定 準1級</li>
+          <li>日商簿記<span class="numeric">2</span>級</li>
+          <li>日本証券アナリスト協会 CMA 第<span class="numeric">1</span>次レベル試験合格</li>
+          <li>実用数学技能検定 準<span class="numeric">1</span>級</li>
         </ul>
         </div>
       </section>
 
-      <section class="panel">
-        <h2>学歴・研究</h2>
-        <ul>
-          <li>成蹊大学 経済学部 経済数理学科 3年（金融工学専攻）</li>
-          <li>ゼミ研究テーマ：LLMによる非財務情報のスコア化</li>
-          <li>上記をもとに、CAPM理論を拡張した個別銘柄のリターン予測に取り組んでいます</li>
-        </ul>
-      </section>
-    </div>
+      </div>
 
     <div class="tab-content" data-tab-panel="skills">
-      <section class="panel">
-        <h2>AI・機械学習開発</h2>
-        <p class="muted">要件定義・データ前処理・モデル構築・学習・検証まで、一貫して取り組んできました。</p>
-        <ul>
-          <li>将棋AI：大規模ResUNet学習。世界コンピュータ将棋選手権に2年連続出場し、一次予選37チーム中4位で予選を突破。</li>
-          <li>ルービックキューブ手順：<br />手順の回しやすさを学習・点数化。</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>データ分析・開発</h2>
-        <ul>
-          <li>R / Python による時系列データの前処理・回帰分析・可視化</li>
-          <li>要件定義から設計・実装・検証までを自ら手がけ、複数のWebアプリを制作・公開（下記「制作Webアプリ」参照）</li>
-        </ul>
-      </section>
-
       <section class="panel">
         <h2>制作Webアプリ</h2>
         <p class="muted">要件定義から設計・実装・公開までを自ら手がけて制作したWebアプリ。各デモはVercelで公開しています。</p>
         <div class="apps">
           <article class="app-card">
             <a class="app-card__media" href="https://yubi-gui.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="YUBI GUI デモを開く">
-              <video src="assets/images/products/yubi-gui.mp4" aria-label="YUBI GUI 指遣いの可視化デモ" autoplay muted loop playsinline preload="metadata"></video>
+              <video src="assets/images/products/yubi-gui.mp4" aria-label="YUBI GUI 指遣いの可視化デモ" autoplay muted loop playsinline preload="metadata" width="512" height="740"></video>
             </a>
             <div class="app-card__body">
               <h3 class="app-card__title">YUBI GUI</h3>
@@ -143,7 +141,7 @@
 
           <article class="app-card">
             <a class="app-card__media" href="https://komanoma-shogi.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="芽生将棋 デモを開く">
-              <video src="assets/images/products/mebae-shogi.mp4" aria-label="芽生将棋 対局アプリのデモ" autoplay muted loop playsinline preload="metadata"></video>
+              <video src="assets/images/products/mebae-shogi.mp4" aria-label="芽生将棋 対局アプリのデモ" autoplay muted loop playsinline preload="metadata" width="512" height="740"></video>
             </a>
             <div class="app-card__body">
               <h3 class="app-card__title">芽生将棋</h3>
@@ -158,7 +156,7 @@
 
           <article class="app-card">
             <a class="app-card__media" href="https://3factor-simulation.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="日本株シミュレーション デモを開く">
-              <video src="assets/images/products/3factor-simulation.mp4" autoplay muted loop playsinline preload="metadata"></video>
+              <video src="assets/images/products/3factor-simulation.mp4" autoplay muted loop playsinline preload="metadata" width="1080" height="1920"></video>
             </a>
             <div class="app-card__body">
               <h3 class="app-card__title">日本株シミュレーション</h3>
@@ -166,14 +164,14 @@
                 <span class="tag tag--primary">金融工学</span>
                 <span class="tag tag--soft">MCMC / CAPM</span>
               </div>
-              <p class="app-card__desc">マルコフ連鎖モンテカルロ法（MCMC）による日経平均の予測と、その推定値を用いたCAPM理論に基づく個別株リターン予想。さらにFama-Frenchの3ファクターモデルを用いて、日本株が各因子をどれほど持っているかをプロットしました。</p>
+              <p class="app-card__desc">マルコフ連鎖モンテカルロ法（MCMC）による日経平均の予測と、その推定値を用いたCAPM理論に基づく個別株リターン予想。さらにFama-Frenchの<span class="numeric">3</span>ファクターモデルを用いて、日本株が各因子をどれほど持っているかをプロットしました。</p>
               <a class="app-card__link" href="https://3factor-simulation.vercel.app/" target="_blank" rel="noopener noreferrer">デモを見る →</a>
             </div>
           </article>
 
           <article class="app-card">
             <a class="app-card__media" href="https://moving-algorithm-11dp.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="うごく手順表 デモを開く">
-              <video src="assets/images/products/moving-algorithm.mp4" autoplay muted loop playsinline preload="metadata"></video>
+              <video src="assets/images/products/moving-algorithm.mp4" autoplay muted loop playsinline preload="metadata" width="720" height="1280"></video>
             </a>
             <div class="app-card__body">
               <h3 class="app-card__title">うごく手順表</h3>
@@ -189,18 +187,35 @@
         </div>
       </section>
 
-      <section class="panel">
+      <section class="panel panel--index">
+        <h2>AI・機械学習開発</h2>
+        <p class="muted">要件定義・データ前処理・モデル構築・学習・検証まで、一貫して取り組んできました。</p>
+        <ul>
+          <li>将棋AI：大規模ResUNet学習。世界コンピュータ将棋選手権に<span class="numeric">2</span>年連続出場し、一次予選<span class="numeric">37</span>チーム中<span class="numeric">4</span>位で予選を突破。</li>
+          <li>ルービックキューブ手順：<br>手順の回しやすさを学習・点数化。</li>
+        </ul>
+      </section>
+
+      <section class="panel panel--index">
+        <h2>データ分析・開発</h2>
+        <ul>
+          <li>R / Python による時系列データの前処理・回帰分析・可視化</li>
+          <li>要件定義から設計・実装・検証までを自ら手がけ、複数のWebアプリを制作・公開（下記「制作Webアプリ」参照）</li>
+        </ul>
+      </section>
+
+      <section class="panel panel--index panel--qualifications">
         <h2>資格</h2>
         <ul>
           <li>基本情報技術者</li>
           <li>応用情報技術者</li>
-          <li>日商簿記2級</li>
+          <li>日商簿記<span class="numeric">2</span>級</li>
           <li>日本証券アナリスト協会 CMA（一次レベル合格、二次レベルを来年受験）</li>
-          <li>実用数学技能検定 準1級</li>
+          <li>実用数学技能検定 準<span class="numeric">1</span>級</li>
         </ul>
       </section>
 
-      <section class="panel">
+      <section class="panel panel--index">
         <h2>趣味</h2>
         <ul>
           <li>将棋：大学から始めて初段。成蹊大学の団体戦C2クラス優勝。</li>
@@ -208,99 +223,99 @@
         </ul>
       </section>
 
-      <section class="panel">
+      <section class="panel panel--media">
         <h2>チームプロジェクト</h2>
         <ul>
           <li>
             成蹊大学文化会Instagram運用・模擬店リーダー担当
-            <br />
+            <br>
             <a href="https://www.instagram.com/seikeibunkakai/" target="_blank" rel="noopener noreferrer">成蹊大学文化会Instagram</a>
           </li>
           <li>
             模擬店初出店でタンフルという新規商品に挑戦
-            <br />
-            <img src="assets/images/keyaki/IMG_3092.jpg" alt="文化祭（keyaki）活動画像 1" class="panel__img panel__img--inline-small panel__img--keyaki" />
+            <br>
+            <img src="assets/images/keyaki/IMG_3092.jpg" alt="文化祭（keyaki）活動画像 1" class="panel__img panel__img--inline-small panel__img--keyaki" loading="lazy" width="3024" height="4032">
           </li>
           <li>
             企画・仕入れ・飴付けの研究・衛生管理などを担当して、チームの協力のお陰で成功に導くことができました。
-            <br />
+            <br>
             <div class="panel__gallery panel__gallery--under-text">
-              <img src="assets/images/keyaki/IMG_3080.JPG" alt="文化祭（keyaki）活動画像 2" class="panel__img panel__img--inline-small panel__img--keyaki" />
-              <img src="assets/images/keyaki/IMG_4566.JPG" alt="文化祭（keyaki）活動画像 3" class="panel__img panel__img--inline-small panel__img--keyaki" />
+              <img src="assets/images/keyaki/IMG_3080.JPG" alt="文化祭（keyaki）活動画像 2" class="panel__img panel__img--inline-small panel__img--keyaki" loading="lazy" width="1536" height="2730">
+              <img src="assets/images/keyaki/IMG_4566.JPG" alt="文化祭（keyaki）活動画像 3" class="panel__img panel__img--inline-small panel__img--keyaki" loading="lazy" width="1521" height="2028">
             </div>
           </li>
-          <li>ルービックキューブの3大会の運営に協力</li>
+          <li>ルービックキューブの<span class="numeric">3</span>大会の運営に協力</li>
         </ul>
       </section>
 
     </div>
 
     <div class="tab-content" data-tab-panel="rubik">
-      <section class="panel">
+      <section class="panel panel--media">
         <h2>国内実績 / アジア大会 / 競技アプローチ</h2>
         <ul>
-          <li>目隠しルービックキューブで日本記録更新（3回）</li>
-          <li>2022年 単発 19.86</li>
-          <li>2022年 平均 21.58</li>
-          <li>2023年 平均 19.55</li>
-          <li>単発・平均ともに日本人初の20秒切りを達成</li>
-          <li>国内・国外大会で優勝7回</li>
-          <li class="highlight-achievement">Rubik's WCA Asian Championship 2024 準優勝。</li>
+          <li>目隠しルービックキューブで日本記録更新（<span class="numeric">3</span>回）</li>
+          <li><span class="numeric">2022</span>年 単発 <span class="numeric">19.86</span></li>
+          <li><span class="numeric">2022</span>年 平均 <span class="numeric">21.58</span></li>
+          <li><span class="numeric">2023</span>年 平均 <span class="numeric">19.55</span></li>
+          <li>単発・平均ともに日本人初の<span class="numeric">20</span>秒切りを達成</li>
+          <li>国内・国外大会で優勝<span class="numeric">7</span>回</li>
+          <li class="highlight-achievement">Rubik's WCA Asian Championship <span class="numeric">2024</span> 準優勝。</li>
         </ul>
-        <p class="muted">既存の818手順に加え、海外トップ層の2768フローティング手順群を日本で初めて採用・運用し、改善を重ねて実績化。</p>
+        <p class="muted">既存の<span class="numeric">818</span>手順に加え、海外トップ層の<span class="numeric">2768</span>フローティング手順群を日本で初めて採用・運用し、改善を重ねて実績化。</p>
         <div class="link-row">
           <a href="https://www.worldcubeassociation.org/persons/2019FUJI07" target="_blank" rel="noopener noreferrer">WCA公式プロフィール</a>
         </div>
         <div class="panel__gallery panel__gallery--under-text">
-          <img src="assets/images/achievements/IMG_4563.PNG" alt="大会実績画像 1" class="panel__img" />
-          <img src="assets/images/achievements/IMG_4564.PNG" alt="大会実績画像 2" class="panel__img" />
+          <img src="assets/images/achievements/IMG_4563.PNG" alt="大会実績画像 1" class="panel__img" loading="lazy" width="1334" height="750">
+          <img src="assets/images/achievements/IMG_4564.PNG" alt="大会実績画像 2" class="panel__img" loading="lazy" width="1334" height="750">
         </div>
       </section>
 
-      <section class="panel">
+      <section class="panel panel--media">
         <h2>教育</h2>
         <ul>
-          <li>東京化学技術館 パズルデーでステージイベント・講師参加(2回)</li>
+          <li>東京化学技術館 パズルデーでステージイベント・講師参加(<span class="numeric">2</span>回)</li>
         </ul>
         <div class="link-row">
-          <a href="https://www.jsf.or.jp/event/202211/puzzle.php" target="_blank" rel="noopener noreferrer">東京パズルデー2022</a>
-          <a href="https://www.jsf.or.jp/event/202311/puzzle.php" target="_blank" rel="noopener noreferrer">東京パズルデー2023</a>
+          <a href="https://www.jsf.or.jp/event/202211/puzzle.php" target="_blank" rel="noopener noreferrer">東京パズルデー<span class="numeric">2022</span></a>
+          <a href="https://www.jsf.or.jp/event/202311/puzzle.php" target="_blank" rel="noopener noreferrer">東京パズルデー<span class="numeric">2023</span></a>
         </div>
         <ul>
           <li>小学校での指導</li>
-          <li>個別指導塾と提携し30人規模のイベントを10回以上主催</li>
-          <li class="highlight-teaching">のべ500人以上にルービックキューブの解き方を指導</li>
+          <li>個別指導塾と提携し<span class="numeric">30</span>人規模のイベントを<span class="numeric">10</span>回以上主催</li>
+          <li class="highlight-teaching">のべ<span class="numeric">500</span>人以上にルービックキューブの解き方を指導</li>
         </ul>
         <div class="panel__gallery panel__gallery--under-text">
-          <img src="assets/images/teaching/IMG_4558.JPG" alt="塾提携イベントの指導画像 1" class="panel__img panel__img--inline-small" />
-          <img src="assets/images/teaching/IMG_4559.PNG" alt="塾提携イベントの指導画像 2" class="panel__img panel__img--inline-small" />
-          <img src="assets/images/teaching/IMG_4560.PNG" alt="塾提携イベントの指導画像 3" class="panel__img panel__img--inline-small" />
+          <img src="assets/images/teaching/IMG_4558.JPG" alt="塾提携イベントの指導画像 1" class="panel__img panel__img--inline-small" loading="lazy" width="296" height="222">
+          <img src="assets/images/teaching/IMG_4559.PNG" alt="塾提携イベントの指導画像 2" class="panel__img panel__img--inline-small" loading="lazy" width="611" height="458">
+          <img src="assets/images/teaching/IMG_4560.PNG" alt="塾提携イベントの指導画像 3" class="panel__img panel__img--inline-small" loading="lazy" width="436" height="327">
         </div>
 
         <ul>
-          <li>目隠しルービックキューブのHowTo動画が9万再生。コミュニティで最も多く再生されている。</li>
-          <li>教材をきっかけに多くの人が目隠しルービックキューブを成功させ、ある視聴者は日本2位まで到達</li>
+          <li>目隠しルービックキューブのHowTo動画が<span class="numeric">9</span>万再生。コミュニティで最も多く再生されている。</li>
+          <li>教材をきっかけに多くの人が目隠しルービックキューブを成功させ、ある視聴者は日本<span class="numeric">2</span>位まで到達</li>
         </ul>
         <div class="link-row">
-          <a href="https://www.youtube.com/watch?v=eYiIHLMLPUc&t=853s" target="_blank" rel="noopener noreferrer">解説動画（YouTube）</a>
+          <a href="https://www.youtube.com/watch?v=eYiIHLMLPUc&amp;t=853s" target="_blank" rel="noopener noreferrer">解説動画（YouTube）</a>
         </div>
-        <img src="assets/images/products/%E8%A7%A3%E8%AA%AC%E5%8B%95%E7%94%BB.png" alt="How to教材動画" class="panel__img panel__img--inline-small" />
+        <img src="assets/images/products/%E8%A7%A3%E8%AA%AC%E5%8B%95%E7%94%BB.png" alt="How to教材動画" class="panel__img panel__img--inline-small" loading="lazy" width="1920" height="1080">
       </section>
 
-      <section class="panel">
+      <section class="panel panel--media">
         <h2>プロ・メディア活動</h2>
         <ul>
-          <li>ニノさん（2022年7月放映）</li>
-          <li>24時間テレビ（2022年8月放映）</li>
-          <li>ニノさん（2023年1月放映）</li>
+          <li>ニノさん（<span class="numeric">2022</span>年<span class="numeric">7</span>月放映）</li>
+          <li><span class="numeric">24</span>時間テレビ（<span class="numeric">2022</span>年<span class="numeric">8</span>月放映）</li>
+          <li>ニノさん（<span class="numeric">2023</span>年<span class="numeric">1</span>月放映）</li>
         </ul>
         <div class="link-row">
           <a href="https://x.com/fujiki_official/status/1543540327432474625" target="_blank" rel="noopener noreferrer">ニノさん（X）</a>
-          <a href="https://x.com/24hourTV/status/1563451578887319557?s=20" target="_blank" rel="noopener noreferrer">24時間テレビ（X）</a>
+          <a href="https://x.com/24hourTV/status/1563451578887319557?s=20" target="_blank" rel="noopener noreferrer"><span class="numeric">24</span>時間テレビ（X）</a>
         </div>
         <div class="panel__gallery panel__gallery--under-text">
-          <img src="assets/images/media/IMG_0035.PNG" alt="メディア出演画像 1" class="panel__img" />
-          <img src="assets/images/media/IMG_4565.JPG" alt="メディア出演画像 2" class="panel__img" />
+          <img src="assets/images/media/IMG_0035.PNG" alt="メディア出演画像 1" class="panel__img" loading="lazy" width="1334" height="750">
+          <img src="assets/images/media/IMG_4565.JPG" alt="メディア出演画像 2" class="panel__img" loading="lazy" width="1334" height="750">
         </div>
       </section>
     </div>
@@ -308,29 +323,11 @@
 
   <footer>
     <p>Contact: <a href="mailto:ue241068@cc.seikei.ac.jp">ue241068@cc.seikei.ac.jp</a></p>
-    <p>Last Updated: 2026/5/30</p>
+    <p class=" updated">Last Updated: 2026/5/30</p>
     <p>© 2026 Masato Fujiwara Portfolio</p>
   </footer>
 
   <!-- Bottom navigation (SNS-style) -->
-  <nav class="bottom-nav" aria-label="セクション切替">
-    <button type="button" class="is-active" data-tab-target="summary" aria-pressed="true">
-      <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z"></path></svg>
-      <span>サマリー</span>
-      <span class="nav-dot" aria-hidden="true"></span>
-    </button>
-    <button type="button" data-tab-target="skills" aria-pressed="false">
-      <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"></path></svg>
-      <span>スキル・資格</span>
-      <span class="nav-dot" aria-hidden="true"></span>
-    </button>
-    <button type="button" data-tab-target="rubik" aria-pressed="false">
-      <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M232,64H208V56a16,16,0,0,0-16-16H64A16,16,0,0,0,48,56v8H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm184-24a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"></path></svg>
-      <span>キューブ実績</span>
-      <span class="nav-dot" aria-hidden="true"></span>
-    </button>
-  </nav>
-
   <script>
     const navButtons = document.querySelectorAll('.bottom-nav button');
     const panels = document.querySelectorAll('.tab-content');
@@ -349,7 +346,7 @@
           panel.classList.toggle('is-active', panel.dataset.tabPanel === target);
         });
 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: 'instant' });
       });
     });
   </script>
