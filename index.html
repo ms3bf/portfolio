@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | 藤原正人</title>
   <meta name="description" content="藤原正人のポートフォリオ。クオンツ・金融志望。データ分析・AIエージェント活用と、目隠しルービックキューブのアジア2位・日本記録の実績。" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261127-career" />
 </head>
 <body>
   <div class="grid-overlay" aria-hidden="true"></div>
@@ -38,25 +38,51 @@
         </ul>
       </section>
 
-      <section class="panel">
-        <h2>来歴</h2>
-        <h3>2021年〜｜ルービックキューブのプロ活動</h3>
+      <section class="panel career">
+        <div class="career__heading">
+          <h2>来歴</h2>
+          <span class="career__branch" aria-label="Gitログ風の来歴">main</span>
+        </div>
+        <ol class="career-log" aria-label="来歴のタイムライン">
+          <li class="career-log__entry">
+            <div class="career-log__meta"><span class="career-log__year">2021 —</span></div>
+            <div class="career-log__card">
+              <h3>ルービックキューブのプロ活動</h3>
+
         <ul>
           <li>目隠しルービックキューブの日本記録を3回更新</li>
           <li>国際大会で入賞（2024年アジア大会準優勝）</li>
           <li>「ニノさん」「24時間テレビ」などのメディアに出演</li>
           <li>子ども向けのルービックキューブイベントを複数主催</li>
         </ul>
+            </div>
+          </li>
+          <li class="career-log__entry">
+            <div class="career-log__meta"><span class="career-log__year">2024</span></div>
+            <div class="career-log__card">
+              <h3>成蹊大学入学</h3>
 
-        <h3>2024年｜成蹊大学入学</h3>
         <p>成蹊大学 経済学部 経済数理学科に入学。金融とAIについて学び、研究・個人開発に取り組む。</p>
+            </div>
+          </li>
+          <li class="career-log__entry">
+            <div class="career-log__meta"><span class="career-log__year">2025</span></div>
+            <div class="career-log__card">
+              <h3>世界コンピュータ将棋選手権 一次予選突破</h3>
 
-        <h3>2025年｜世界コンピュータ将棋選手権 一次予選突破</h3>
         <p>開発した将棋AI「芽生将棋」で出場し、一次予選を突破。</p>
+            </div>
+          </li>
+          <li class="career-log__entry">
+            <div class="career-log__meta"><span class="career-log__year">2026</span> <span class="career-log__head">HEAD</span></div>
+            <div class="career-log__card">
+              <h3>世界コンピュータ将棋選手権 一次予選突破</h3>
 
-        <h3>2026年｜世界コンピュータ将棋選手権 一次予選突破</h3>
         <p>「芽生将棋」で2年連続の一次予選突破。</p>
-
+            </div>
+          </li>
+        </ol>
+        <div class="career__qualifications">
         <h3>取得資格・試験合格</h3>
         <ul>
           <li>基本情報技術者</li>
@@ -65,6 +91,7 @@
           <li>日本証券アナリスト協会 CMA 第1次レベル試験合格</li>
           <li>実用数学技能検定 準1級</li>
         </ul>
+        </div>
       </section>
 
       <section class="panel">
@@ -80,10 +107,10 @@
     <div class="tab-content" data-tab-panel="skills">
       <section class="panel">
         <h2>AI・機械学習開発</h2>
-        <p class="muted">要件定義・データ前処理・モデル構築・学習・検証まで、自らの手で一貫して取り組んできました。タスクに応じて適切なアーキテクチャを選び、学習を完遂できる点が強みです。</p>
+        <p class="muted">要件定義・データ前処理・モデル構築・学習・検証まで、一貫して取り組んできました。</p>
         <ul>
-          <li>将棋AI：大規模ResNet（PyTorch）を設計・学習。世界コンピュータ将棋選手権に2年連続出場し、一次予選37チーム中4位で予選を突破。</li>
-          <li>ルービックキューブ手順：LightGBM（勾配ブースティング）で手順の回しやすさを学習・点数化。</li>
+          <li>将棋AI：大規模ResUNet学習。世界コンピュータ将棋選手権に2年連続出場し、一次予選37チーム中4位で予選を突破。</li>
+          <li>ルービックキューブ手順：<br />手順の回しやすさを学習・点数化。</li>
         </ul>
       </section>
 
@@ -109,7 +136,7 @@
                 <span class="tag tag--primary">ルービックキューブ</span>
                 <span class="tag tag--soft">3D / 指遣い学習</span>
               </div>
-              <p class="app-card__desc">世界初の、ルービックキューブの指遣いを学習・可視化できるアプリ。3Dの手とキューブで、各手順の指の動きを直感的に確認できます。</p>
+              <p class="app-card__desc">世界初の、ルービックキューブの指遣いを機械学習・可視化したアプリ。3Dの手とキューブで、各手順の指の動きを直感的に確認できます。</p>
               <a class="app-card__link" href="https://yubi-gui.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
             </div>
           </article>
@@ -176,7 +203,7 @@
       <section class="panel">
         <h2>趣味</h2>
         <ul>
-          <li>将棋：大学から始めて初段。成蹊大学の団体戦（2025年）でC2クラス優勝。</li>
+          <li>将棋：大学から始めて初段。成蹊大学の団体戦C2クラス優勝。</li>
           <li>読書・個人開発</li>
         </ul>
       </section>
@@ -241,8 +268,8 @@
         </div>
         <ul>
           <li>小学校での指導</li>
-          <li>個別指導塾と提携し30人規模のイベントを5回主催</li>
-          <li class="highlight-teaching">のべ200人以上にルービックキューブの解き方を指導</li>
+          <li>個別指導塾と提携し30人規模のイベントを10回以上主催</li>
+          <li class="highlight-teaching">のべ500人以上にルービックキューブの解き方を指導</li>
         </ul>
         <div class="panel__gallery panel__gallery--under-text">
           <img src="assets/images/teaching/IMG_4558.JPG" alt="塾提携イベントの指導画像 1" class="panel__img panel__img--inline-small" />
@@ -251,8 +278,8 @@
         </div>
 
         <ul>
-          <li>目隠しルービックキューブのHowTo動画が8万再生。コミュニティで最も多く再生されている。</li>
-          <li>教材をきっかけに多くの人が目隠しルービックキューブを成功させ、ある視聴者は日本3位まで到達</li>
+          <li>目隠しルービックキューブのHowTo動画が9万再生。コミュニティで最も多く再生されている。</li>
+          <li>教材をきっかけに多くの人が目隠しルービックキューブを成功させ、ある視聴者は日本2位まで到達</li>
         </ul>
         <div class="link-row">
           <a href="https://www.youtube.com/watch?v=eYiIHLMLPUc&t=853s" target="_blank" rel="noopener noreferrer">解説動画（YouTube）</a>
