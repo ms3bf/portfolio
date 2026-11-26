@@ -34,7 +34,7 @@ img { height: auto; }
 }
 .hero__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(230px, 28.5vw, 327px);
+  grid-template-columns: minmax(0, 1fr) clamp(245px, 31.5vw, 360px);
   gap: 32px;
   padding-block: 54px 48px;
   align-items: start;
@@ -180,7 +180,7 @@ footer p + p { margin-top: 4px; }
   :root { --gutter: clamp(16px, 5.15vw, 26px); }
   body { padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px)); }
   .hero__inner {
-    grid-template-columns: minmax(0,1fr) clamp(96px, 30vw, 117px);
+    grid-template-columns: minmax(0,1fr) clamp(100px, 33.85vw, 132px);
     gap: 6px 13px;
     padding-block: 26px 24px;
     align-items: center;
