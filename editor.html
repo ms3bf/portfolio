@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfolio 文章編集</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101216;color:#eee;font:16px system-ui,sans-serif}header{padding:16px;max-width:1100px;margin:auto}h1{font-size:20px;margin:0 0 8px}p{margin:8px 0;color:#ccd0d8;line-height:1.6}.actions{display:flex;gap:8px;flex-wrap:wrap}button{font:inherit;padding:10px 14px;border:1px solid #777;border-radius:6px;background:#252b34;color:white;cursor:pointer}button.primary{background:#e4c383;color:#16191e}button:disabled{opacity:.4}#status{font-size:14px;min-height:22px}iframe{display:block;width:100%;height:calc(100dvh - 230px);min-height:400px;border:0;border-top:1px solid #555;background:#101216}textarea{width:100%;height:150px;font-size:16px}details{margin-top:8px}
+</style>
+<header>
+<h1>Portfolio 文章編集</h1>
+<p>下の文章をタップして直接編集できます。下部のタブで各ページを切り替えられます。編集後は「変更をコピー」してChatGPTに貼り付けてください。</p>
+<div class="actions"><button class="primary" id="copy" disabled>変更をコピー</button><button id="download" disabled>変更ファイルを保存</button><button id="reset" disabled>編集を元に戻す</button></div>
+<p id="status" role="status" aria-live="polite">ページを読み込んでいます…</p>
+<details id="fallback"><summary>コピー用の変更内容を表示</summary><textarea id="output" readonly aria-label="コピー用の変更内容"></textarea></details>
+</header>
+<iframe id="preview" title="ポートフォリオの文章編集画面" sandbox="allow-same-origin allow-scripts"></iframe>
+<script>
+'use strict';
+const frame=document.querySelector('#preview'),status=document.querySelector('#status'),output=document.querySelector('#output');
+const buttons=[...document.querySelectorAll('button')];
+let entries=[],sourceHash='',storageKey='',storageAvailable=true;
+function changes(){return entries.filter(e=>e.span.textContent!==e.before).map(e=>({textNodeIndex:e.index,before:e.before,after:e.span.textContent}));}
+function payload(){return {format:'portfolio-text-edits-v1',repository:'ms3bf/portfolio',path:'index.html',sourceSha256:sourceHash,changes:changes()};}
+function serialize(){return JSON.stringify(payload(),null,2);}
+function update(){const data=serialize();output.value=data;try{localStorage.setItem(storageKey,data);}catch{storageAvailable=false;}status.textContent=changes().length+'箇所を変更。'+(storageAvailable?'このブラウザに下書き保存済み。':'下書き保存が使えません。変更をコピーして保管してください。')+' 公開ページへの反映はChatGPTに変更を渡した後です。';}
+document.querySelector('#copy').onclick=async()=>{output.value=serialize();try{await navigator.clipboard.writeText(output.value);status.textContent='コピーしました。このチャットに貼り付けて「反映して」と送ってください。';}catch{document.querySelector('#fallback').open=true;output.focus();output.select();status.textContent='下の変更内容を選択してコピーし、このチャットに貼り付けてください。';}};
+document.querySelector('#download').onclick=()=>{const url=URL.createObjectURL(new Blob([serialize()],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='portfolio-edits.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent='保存した portfolio-edits.json をこのチャットに添付してください。';};
+document.querySelector('#reset').onclick=()=>{if(!confirm('この画面での編集をすべて元に戻しますか？'))return;entries.forEach(e=>e.span.textContent=e.before);update();};
+(async()=>{try{
+const response=await fetch('index.html',{cache:'no-store'});if(!response.ok)throw new Error('HTTP '+response.status);const source=await response.text();
+sourceHash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(source))),b=>b.toString(16).padStart(2,'0')).join('');storageKey='portfolio-editor:'+sourceHash;
+let saved;try{saved=JSON.parse(localStorage.getItem(storageKey)||'null');}catch{}
+frame.onload=()=>{try{
+const doc=frame.contentDocument;const walker=doc.createTreeWalker(doc.body,NodeFilter.SHOW_TEXT);const nodes=[];let node;
+while(node=walker.nextNode()){if(node.textContent.trim()&&node.parentElement.closest('header,main,footer')&&!node.parentElement.closest('script,style,button,svg'))nodes.push(node);}
+const style=doc.createElement('style');style.textContent='[data-edit-text]{outline:1px dashed #c4a46870;outline-offset:3px;cursor:text;white-space:pre-wrap}[data-edit-text]:focus{outline:2px solid #e4c383;background:#c4a46818}';doc.head.append(style);
+entries=nodes.map((node,index)=>{const span=doc.createElement('span');span.setAttribute('data-edit-text',String(index));span.setAttribute('contenteditable','plaintext-only');span.setAttribute('aria-label','編集可能な文章');span.textContent=node.textContent;const entry={index,before:node.textContent,span};node.replaceWith(span);span.addEventListener('input',update);span.addEventListener('paste',event=>{event.preventDefault();doc.execCommand('insertText',false,event.clipboardData.getData('text/plain'));});return entry;});
+doc.addEventListener('click',event=>{if(event.target.closest('a'))event.preventDefault();},true);
+if(saved&&saved.sourceSha256===sourceHash&&Array.isArray(saved.changes)){for(const change of saved.changes){const entry=entries[change.textNodeIndex];if(entry&&entry.before===change.before&&typeof change.after==='string')entry.span.textContent=change.after;}}
+buttons.forEach(b=>b.disabled=false);update();
+}catch(error){status.textContent='編集画面を開けませんでした：'+error.message;}};
+frame.srcdoc=source;
+}catch(error){status.textContent='読み込みに失敗しました。再読み込みしてください：'+error.message;}})();
+</script>
+</html>
