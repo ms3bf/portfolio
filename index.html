@@ -4,8 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Portfolio | 藤原正人</title>
-  <meta name="description" content="藤原正人のポートフォリオ。クオンツ・金融志望。データ分析・AIエージェント活用と、目隠しルービックキューブのアジア2位・日本記録の実績。">
-  <link rel="stylesheet" href="styles.css?v=20261127-portrait"></head>
+  <meta name="description" content="藤原正人のポートフォリオ。クオンツ・金融志望。日本株の有価証券報告書を分析する研究と、将棋AI・ルービックキューブのアプリ開発。">
+  <link rel="canonical" href="https://ms3bf.github.io/portfolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://ms3bf.github.io/portfolio/">
+  <meta property="og:title" content="藤原正人 | クオンツ・金融志望">
+  <meta property="og:description" content="藤原正人のポートフォリオ。クオンツ・金融志望。日本株の有価証券報告書を分析する研究と、将棋AI・ルービックキューブのアプリ開発。">
+  <meta property="og:image" content="https://ms3bf.github.io/portfolio/assets/portfolio-og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="藤原正人のポートフォリオとプロフィール写真">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="96x96">
+  <link rel="stylesheet" href="styles.css?v=20261127-review"></head>
 <body>
   <nav class="bottom-nav" aria-label="セクション切替">
     <div class="nav-inner"><button type="button" class="is-active" data-tab-target="summary" aria-pressed="true">
@@ -30,7 +43,7 @@
       <div>
         <p class="eyebrow">PORTFOLIO</p>
         <h1>藤原正人</h1>
-        <p class="lead">将棋AI開発者・証券アナリスト志望。データドリブンで大規模データの前処理・学習・検証が好みです。</p>
+        <p class="lead">クオンツ・金融志望。日本株の有価証券報告書を分析し、将棋AIやルービックキューブのアプリも開発しています。</p>
         <div class="link-row">
           <a href="https://github.com/ms3bf" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://www.worldcubeassociation.org/persons/2019FUJI07" target="_blank" rel="noopener noreferrer">WCA Profile</a>
@@ -46,10 +59,10 @@
       <section class="panel panel--index">
         <h2>サマリー</h2>
         <ul>
-          <li><strong>研究</strong>：日本株の<span class="numeric">26</span>年分・全企業<span class="numeric">4000</span>社の有価証券報告書の非財務情報をOCR・LLMでスコア化して 因子分析を行っています。</li>
-          <li><strong>将棋AIの開発</strong>：ResUNetを用いて<span class="numeric">20</span>億局面を学習した「芽生将棋」で世界コンピュータ将棋選手権に<span class="numeric">2</span>年連続出場。一次予選<span class="numeric">37</span>チーム中<span class="numeric">4</span>位で予選を突破。</li>
+          <li><strong>研究</strong>：日本株の約<span class="numeric">4,000</span>社・<span class="numeric">26</span>年分の有価証券報告書を対象に、非財務情報をOCRとLLMでスコア化しています。</li>
+          <li><strong>将棋AIの開発</strong>：ResUNetを用いて<span class="numeric">20</span>億局面を学習した「芽生将棋」で世界コンピュータ将棋選手権に<span class="numeric">2</span>年連続出場。<span class="numeric">2026</span>年に<a href="https://www.computer-shogi.org/wcsc36/lower.html">一次予選<span class="numeric">37</span>チーム中<span class="numeric">4</span>位</a>で二次予選に進出。</li>
           <li><strong>データ分析・モデリング</strong>：Python による時系列データの前処理・回帰分析。適切な手法を選び、学習・検証を完遂できます。</li>
-          <li><strong>金融知識</strong>：日本証券アナリスト協会CMA試験<span class="numeric">1</span>次レベルに合格、簿記<span class="numeric">2</span>級取得。四季報や日経新聞の購読を日課とし、市場と経済への関心が高いです。</li>
+          <li><strong>金融知識</strong>：四季報や日経新聞の購読を日課とし、市場と経済への関心が高いです。</li>
         </ul>
       </section>
 
@@ -58,7 +71,7 @@
         <ul>
           <li>成蹊大学 経済学部 経済数理学科 <span class="numeric">3</span>年（金融工学専攻）</li>
           <li>ゼミ研究テーマ：LLMによる非財務情報のスコア化</li>
-          <li>上記をもとに、CAPM理論を拡張した個別銘柄のリターン予測に取り組んでいます</li>
+          <li><strong>分析結果</strong>：人的資本の点数と翌年のROAの順位相関は <strong>r = 0.20</strong>（t = 24.9、約7万社年）。年・文章量・企業規模の影響を除いた後の値で、t値は企業ごとのまとまりを考慮しています。上場廃止企業2,185社を加えても、結果はほぼ変わりませんでした。</li>
         </ul>
       </section>
     <section class="panel career panel--index">
@@ -105,16 +118,6 @@
             </div>
           </li>
         </ol>
-        <div class="career__qualifications">
-        <h3>取得資格・試験合格</h3>
-        <ul>
-          <li>基本情報技術者</li>
-          <li>応用情報技術者</li>
-          <li>日商簿記<span class="numeric">2</span>級</li>
-          <li>日本証券アナリスト協会 CMA 第<span class="numeric">1</span>次レベル試験合格</li>
-          <li>実用数学技能検定 準<span class="numeric">1</span>級</li>
-        </ul>
-        </div>
       </section>
 
       </div>
@@ -125,44 +128,8 @@
         <p class="muted">要件定義から設計・実装・公開までを自ら手がけて制作したWebアプリ。各デモはVercelで公開しています。</p>
         <div class="apps">
           <article class="app-card">
-            <a class="app-card__media" href="https://yubi-gui.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="YUBI GUI デモを開く">
-              <video src="assets/images/products/yubi-gui.mp4" aria-label="YUBI GUI 指遣いの可視化デモ" autoplay muted loop playsinline preload="metadata" width="512" height="740"></video>
-            </a>
-            <div class="app-card__body">
-              <h3 class="app-card__title">YUBI GUI</h3>
-              <div class="tags">
-                <span class="tag tag--primary">ルービックキューブ</span>
-                <span class="tag tag--soft">3D / 指遣い学習</span>
-              </div>
-              <details class="app-card__details" open>
-                <summary>説明を読む</summary>
-                <p class="app-card__desc">世界初の、ルービックキューブの指遣いを機械学習・可視化したアプリ。3Dの手とキューブで、各手順の指の動きを直感的に確認できます。</p>
-              </details>
-              <a class="app-card__link" href="https://yubi-gui.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
-            </div>
-          </article>
-
-          <article class="app-card">
-            <a class="app-card__media" href="https://komanoma-shogi.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="芽生将棋 デモを開く">
-              <video src="assets/images/products/mebae-shogi.mp4" aria-label="芽生将棋 対局アプリのデモ" autoplay muted loop playsinline preload="metadata" width="512" height="740"></video>
-            </a>
-            <div class="app-card__body">
-              <h3 class="app-card__title">芽生将棋</h3>
-              <div class="tags">
-                <span class="tag tag--primary">将棋AI</span>
-                <span class="tag tag--soft">文化祭 / 対戦アプリ</span>
-              </div>
-              <details class="app-card__details" open>
-                <summary>説明を読む</summary>
-                <p class="app-card__desc">成蹊大学の文化祭で、来場者がAI将棋と対戦する企画に使用したアプリを公開。ブラウザ上でAIとの対局を楽しめます。</p>
-              </details>
-              <a class="app-card__link" href="https://komanoma-shogi.vercel.app" target="_blank" rel="noopener noreferrer">対局する →</a>
-            </div>
-          </article>
-
-          <article class="app-card">
             <a class="app-card__media" href="https://3factor-simulation.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="日本株シミュレーション デモを開く">
-              <video src="assets/images/products/3factor-simulation.mp4" autoplay muted loop playsinline preload="metadata" width="1080" height="1920"></video>
+              <video src="assets/images/products/3factor-simulation.mp4" poster="assets/images/products/3factor-simulation-poster.webp" muted loop playsinline preload="none" width="1080" height="1920"></video>
             </a>
             <div class="app-card__body">
               <h3 class="app-card__title">日本株シミュレーション</h3>
@@ -179,8 +146,46 @@
           </article>
 
           <article class="app-card">
+            <a class="app-card__media" href="https://yubi-gui.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="YUBI GUI デモを開く">
+              <video src="assets/images/products/yubi-gui.mp4" poster="assets/images/products/yubi-gui-poster.webp" aria-label="YUBI GUI 指遣いの可視化デモ" muted loop playsinline preload="none" width="512" height="740"></video>
+            </a>
+            <div class="app-card__body">
+              <h3 class="app-card__title">YUBI GUI</h3>
+              <div class="tags">
+                <span class="tag tag--primary">ルービックキューブ</span>
+                <span class="tag tag--soft">3D / 指遣い学習</span>
+              </div>
+              <details class="app-card__details" open>
+                <summary>説明を読む</summary>
+                <p class="app-card__desc">ルービックキューブの回転手順に対して、指遣いを機械学習で推定し、3Dの手とキューブで可視化します。</p>
+              </details>
+              <a class="app-card__link" href="https://yubi-gui.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
+              <a class="app-card__link" href="https://github.com/ms3bf/yubi-gui">GitHub</a>
+            </div>
+          </article>
+
+          <article class="app-card">
+            <a class="app-card__media" href="https://komanoma-shogi.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="芽生将棋 デモを開く">
+              <video src="assets/images/products/mebae-shogi.mp4" poster="assets/images/products/mebae-shogi-poster.webp" aria-label="芽生将棋 対局アプリのデモ" muted loop playsinline preload="none" width="512" height="740"></video>
+            </a>
+            <div class="app-card__body">
+              <h3 class="app-card__title">芽生将棋</h3>
+              <div class="tags">
+                <span class="tag tag--primary">将棋AI</span>
+                <span class="tag tag--soft">文化祭 / 対戦アプリ</span>
+              </div>
+              <details class="app-card__details" open>
+                <summary>説明を読む</summary>
+                <p class="app-card__desc">成蹊大学の文化祭で、来場者がAI将棋と対戦する企画に使用したアプリを公開。ブラウザ上でAIとの対局を楽しめます。</p>
+              </details>
+              <a class="app-card__link" href="https://komanoma-shogi.vercel.app" target="_blank" rel="noopener noreferrer">対局する →</a>
+              <a class="app-card__link" href="https://www.computer-shogi.org/wcsc36/lower.html">選手権公式結果</a>
+            </div>
+          </article>
+
+          <article class="app-card">
             <a class="app-card__media" href="https://moving-algorithm-11dp.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="うごく手順表 デモを開く">
-              <video src="assets/images/products/moving-algorithm.mp4" autoplay muted loop playsinline preload="metadata" width="720" height="1280"></video>
+              <video src="assets/images/products/moving-algorithm.mp4" poster="assets/images/products/moving-algorithm-poster.webp" muted loop playsinline preload="none" width="720" height="1280"></video>
             </a>
             <div class="app-card__body">
               <h3 class="app-card__title">うごく手順表</h3>
@@ -190,7 +195,7 @@
               </div>
               <details class="app-card__details" open>
                 <summary>説明を読む</summary>
-                <p class="app-card__desc">ルービックキューブの基本手順 F2L・OLL・PLL を一番分かりやすく可視化。</p>
+                <p class="app-card__desc">ルービックキューブのF2L・OLL・PLLを、各回転を追えるアニメーション付きの手順表にまとめました。</p>
               </details>
               <a class="app-card__link" href="https://moving-algorithm-11dp.vercel.app" target="_blank" rel="noopener noreferrer">デモを見る →</a>
             </div>
@@ -203,9 +208,9 @@
         <h2>資格</h2>
         <ul>
           <li>基本情報技術者</li>
-          <li>応用情報技術者</li>
+          <li>応用情報技術者（科目A通過・科目B 12月受験）</li>
           <li>日商簿記<span class="numeric">2</span>級</li>
-          <li>日本証券アナリスト協会 CMA（一次レベル合格、二次レベルを来年受験）</li>
+          <li>日本証券アナリスト協会 CMA（第1次レベル試験合格・第2次レベル試験は2027年受験予定）</li>
           <li>実用数学技能検定 準<span class="numeric">1</span>級</li>
         </ul>
       </section>
@@ -229,14 +234,14 @@
           <li>
             模擬店初出店でタンフルという新規商品に挑戦
             <br>
-            <img src="assets/images/keyaki/IMG_3092.jpg" alt="文化祭（keyaki）活動画像 1" class="panel__img panel__img--inline-small panel__img--keyaki" loading="lazy" width="3024" height="4032">
+            <img src="assets/images/keyaki/IMG_3092.jpg" alt="文化祭（keyaki）活動画像 1" class="panel__img panel__img--inline-small panel__img--keyaki" loading="lazy" width="960" height="1280">
           </li>
           <li>
             企画・仕入れ・飴付けの研究・衛生管理などを担当して、チームの協力のお陰で成功に導くことができました。
             <br>
             <div class="panel__gallery panel__gallery--under-text">
-              <img src="assets/images/keyaki/IMG_3080.JPG" alt="文化祭（keyaki）活動画像 2" class="panel__img panel__img--inline-small panel__img--keyaki" loading="lazy" width="1536" height="2730">
-              <img src="assets/images/keyaki/IMG_4566.JPG" alt="文化祭（keyaki）活動画像 3" class="panel__img panel__img--inline-small panel__img--keyaki" loading="lazy" width="1521" height="2028">
+              <img src="assets/images/keyaki/IMG_3080.JPG" alt="文化祭（keyaki）活動画像 2" class="panel__img panel__img--inline-small panel__img--keyaki" loading="lazy" width="720" height="1280">
+              <img src="assets/images/keyaki/IMG_4566.JPG" alt="文化祭（keyaki）活動画像 3" class="panel__img panel__img--inline-small panel__img--keyaki" loading="lazy" width="960" height="1280">
             </div>
           </li>
           <li>ルービックキューブの<span class="numeric">3</span>大会の運営に協力</li>
@@ -288,7 +293,7 @@
         </div>
 
         <ul>
-          <li>目隠しルービックキューブのHowTo動画が<span class="numeric">9</span>万再生。コミュニティで最も多く再生されている。</li>
+          <li>目隠しルービックキューブのHowTo動画が<span class="numeric">9</span>万再生。</li>
           <li>教材をきっかけに多くの人が目隠しルービックキューブを成功させ、ある視聴者は日本<span class="numeric">2</span>位まで到達</li>
         </ul>
         <div class="link-row">
@@ -335,6 +340,16 @@
     }
     setAppDetails();
     compactApps.addEventListener('change', setAppDetails);
+
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(({ target, intersectionRatio }) => {
+          if (intersectionRatio >= 0.4) target.play().catch(() => {});
+          else target.pause();
+        });
+      }, { threshold: 0.4 });
+      document.querySelectorAll('.app-card video').forEach((video) => videoObserver.observe(video));
+    }
 
     navButtons.forEach((button) => {
       button.addEventListener('click', () => {
