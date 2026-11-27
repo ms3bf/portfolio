@@ -233,3 +233,5 @@ footer p + p { margin-top: 4px; }
   }
   .bottom-nav svg { display: block; width: 21px; height: 21px; }
 }
+
+.app-card__link + .app-card__link { margin-left: 1.2em; }
